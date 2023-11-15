@@ -2,6 +2,7 @@
 
 import { useMemo } from 'react';
 import CarItem from './car-item/CarItem'
+import CreateCarForm from './create-car-form/CreateCarForm';
 const res = await fetch('http://localhost:3000/cars');
 const cars = await res.json();
 
@@ -14,6 +15,7 @@ const Home = () => {
         <>
         <div>
             <h1>My catalog</h1>
+            <CreateCarForm/>
             <div>
                 {filteredCars.length ? filteredCars.map(car => (
                     <CarItem key={car.id} car={car}/>
