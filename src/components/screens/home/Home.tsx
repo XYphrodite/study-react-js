@@ -1,8 +1,8 @@
-import styles from './Home.module.css' 
-import car1 from './1.jpg' 
-import {cars} from './cars.data'
-import CarItem from './car-item/CarItem'
 
+
+import CarItem from './car-item/CarItem'
+const res = await fetch('http://localhost:3000/cars');
+const cars = await res.json();
 const Home = () => {
     return (
         <>

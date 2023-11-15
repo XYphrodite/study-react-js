@@ -4,7 +4,7 @@ const CarItem = ({car}) => {
     return (
     <div key={car.id} className={styles.item }>
         <div className={styles.imgBox}>
-            <img src={car.image} alt="" />
+            <img srcSet={car.image} alt="" />
         </div>
         <div className={styles.info}>
             <h2>{car.name}</h2>
